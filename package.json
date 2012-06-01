@@ -1,0 +1,25 @@
+{
+  "name": "tbwdjs",
+  "description": "a wrapper for camme/webdriverjs to ease testingbot.com testing",
+  "private": false,
+  "author": {
+    "name": "Tom Regner",
+    "email": "tom@goochesa.de"
+  },
+  "main": "./lib/tbwdjs",
+  "version": "0.0.1",
+  "dependencies": {
+    "webdriverjs": "*"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tomterl/tbwdjs.git"
+  },
+  "bugs": {
+    "https://github.com/tomterl/tbwdjs/issues"
+  },
+  "engines": { "node": ">= 0.6.15" }
+}

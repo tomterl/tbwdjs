@@ -1,0 +1,104 @@
+* tbwdjs -- TestingBotWebDriverJS
+
+A small wrapper around camme/webdriverjs, that eases testing on
+[testbot.com].
+
+** Installation
+
+   #+BEGIN_SRC sh 
+     $ npm install tbwdjs
+   #+END_SRC
+** Usage
+   
+   The boilerplate example given by the testingbot.com wizard is
+   reduced to
+   #+BEGIN_SRC js
+     var webdriverjs = require('tbwdjs');
+     var client = webdriverjs.remote({
+         host: "hub.testingbot.com", 
+         desiredCapabilities: {
+             browserName: "internet explorer", 
+             version: 9, 
+             platform: "WINDOWS", 
+             api_key: "YOURKEY", 
+             api_secret: "YOUSECRET" 
+         }
+     });
+     
+     client
+         .init()
+         .url("http://google.com/")
+         .titleEquals("Google")
+         .end();
+   #+END_SRC
+
+   instead of the more flamboyant:
+
+   #+BEGIN_SRC js
+     var webdriverjs = require("webdriverjs");
+     var assert = require("assert");
+     var http = require('http');
+     var qs = require('querystring');
+     var client = webdriverjs.remote({host: "hub.testingbot.com", 
+                                      desiredCapabilities:{browserName: "internet explorer", 
+                                                           version: 9, platform: "WINDOWS", 
+                                                           api_key: "YOURKEY", api_secret: "YOURSECRET" 
+     }});
+     
+     var old = client.end;
+     client._errors = [];
+     client.end = function(fn) {
+         old(function() {
+             if (fn) { fn(); }
+             var parts = __filename.split("/");
+             var name = parts[parts.length - 1].replace(".js", "");
+             var postData = qs.stringify({
+                 client_key: client.desiredCapabilities["api_key"],
+                 client_secret: client.desiredCapabilities["api_secret"],
+                 session_id: client.sessionId,
+                 success:  client._errors.length === 0,
+                 name: name,
+                 kind: 10
+             });
+             
+             var post_options = {
+                   host: 'testingbot.com',
+                   port: '80',
+                   path: '/hq',
+                   method: 'POST',
+                   headers: {
+                       'Content-Type': 'application/x-www-form-urlencoded',
+                       'Content-Length': postData.length
+                   }
+               };
+     
+               // Set up the request
+               var post_req = http.request(post_options, function(res) {
+                   res.setEncoding('utf8');
+               });
+     
+               // post the data
+               post_req.write(postData);
+               post_req.end();
+         });
+     };
+     
+     client
+         .init()
+         .url("http://google.com/")
+         .getTitle(function(title) { try { assert.equal(title, "Google") } catch (e) { client._errors.push(e); } })
+         .end();
+             
+   #+END_SRC
+
+*** Additional commands
+	- =windowHandle()=
+	  Protocol command that returns the handle of the current browser window.
+	- =titleEquals(title[, callback])=
+	  checks if the current windowtitle equals /title/; errors are
+      noted and will mark the check as failed on testingbot.com.
+	- =cssVisible(cssSelector, visible, callback)=
+	  checks if the element identified by /cssSelector/ is visible or
+      not according to the parameter /visible/; errors are
+      noted and will mark the check as failed on testingbot.com.
+   
