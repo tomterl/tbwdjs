@@ -19,7 +19,7 @@
     "url": "git://github.com/tomterl/tbwdjs.git"
   },
   "bugs": {
-    "https://github.com/tomterl/tbwdjs/issues"
+    "url": "https://github.com/tomterl/tbwdjs/issues"
   },
   "engines": { "node": ">= 0.6.15" }
 }
