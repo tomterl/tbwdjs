@@ -17,4 +17,6 @@ jslint:
 node_modules/.bin/jshint:
 	@npm install jshint
 
-.PHONY: jslint jshint bootstrap
+clean:
+	@rm -r node_modules
+.PHONY: jslint jshint bootstrap clean
