@@ -101,7 +101,16 @@ A small wrapper around camme/webdriverjs, that eases testing on
 	  checks if the element identified by /cssSelector/ is visible or
       not according to the parameter /visible/; errors are
       noted and will mark the check as failed on testingbot.com.
-   
+** Installation
+  
+  Included are convenience methods to query the TestingBot API.
+  Please have a look at this example:
+  #+BEGIN_SRC js
+    var TestingBot = require('./lib/api.js');
+    var t = new TestingBot({ api_key: "key", api_secret: "secret" });
+    t.getBrowsers(function(browsers) { console.log(browsers); });
+   #+END_SRC
+
 ** Contribute
 
    Every contribution is welcome. Simply fork the repository, do your
