@@ -102,13 +102,13 @@ A small wrapper around camme/webdriverjs, that eases testing on
       to the parameter /visible/; errors are noted and will mark the
       check as failed on testingbot.com.
 	- =waitForVar(varname, expected, timeout, equality[, callback])=
-      Wait at most /timeout/ seconds for the variable /varname/ to
+      Wait at least /timeout/ seconds for the variable /varname/ to
       (not) equal to /expected/ (depending on the equality value
       given). Does not affect check status.
-	- =waitForTextIn(cssSelector, timeout[, callback])= Wait at most
+	- =waitForTextIn(cssSelector, timeout[, callback])= Wait at least
       /timeout/ seconds for the element identified by /cssSelector/ to
       appear and contain text. Does not affect check status.
-	- =waitForValueIn(cssSelector, timeout[, callback])= Wait at most
+	- =waitForValueIn(cssSelector, timeout[, callback])= Wait at least
       /timeout/ seconds for the element identified by /cssSelector/ to
       appear and have a non empty value attribute. Does not affect
       check status.
