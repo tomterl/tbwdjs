@@ -137,7 +137,7 @@ A small wrapper around camme/webdriverjs, that eases testing on
    
    Contributions should be =make jshint= and =make jslint=
    clean. =make jshint= will install the npm module locally if it is
-   not present. =make jslint= depends on googles [[https://developers.google.com/closure/utilities/][closure
+   not present. =make jslint= depends on Google's [[https://developers.google.com/closure/utilities/][closure
    linter]], =gjslint= must be in your path.
 
    
