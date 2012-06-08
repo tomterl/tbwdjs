@@ -92,15 +92,28 @@ A small wrapper around camme/webdriverjs, that eases testing on
    #+END_SRC
 
 *** Additional commands
-	- =windowHandle()=
-	  Protocol command that returns the handle of the current browser window.
-	- =titleEquals(title[, callback])=
-	  checks if the current windowtitle equals /title/; errors are
-      noted and will mark the check as failed on testingbot.com.
-	- =cssVisible(cssSelector, visible, callback)=
-	  checks if the element identified by /cssSelector/ is visible or
-      not according to the parameter /visible/; errors are
-      noted and will mark the check as failed on testingbot.com.
+	- =windowHandle()= Protocol command that returns the handle of the
+      current browser window.
+	- =titleEquals(title[, callback]})= checks if the current
+      windowtitle equals /title/; errors are noted and will mark the
+      check as failed on testingbot.com.
+	- =cssVisible(cssSelector, visible[, callback])= checks if the
+      element identified by /cssSelector/ is visible or not according
+      to the parameter /visible/; errors are noted and will mark the
+      check as failed on testingbot.com.
+	- =waitForVar(varname, expected, timeout, equality[, callback])=
+      Wait at most /timeout/ seconds for the variable /varname/ to
+      (not) equal to /expected/ (depending on the equality value
+      given). Does not affect check status.
+	- =waitForTextIn(cssSelector, timeout[, callback])= Wait at most
+      /timeout/ seconds for the element identified by /cssSelector/ to
+      appear and contain text. Does not affect check status.
+	- =waitForValueIn(cssSelector, timeout[, callback])= Wait at most
+      /timeout/ seconds for the element identified by /cssSelector/ to
+      appear and have a non empty value attribute. Does not affect
+      check status.
+	- =getVar(varname[, callback])= Inject javascript into the browser
+      under test to return the current value of the variable /varname/.
 
 *** testingbot.com API
   
