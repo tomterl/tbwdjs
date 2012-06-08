@@ -113,7 +113,13 @@ A small wrapper around camme/webdriverjs, that eases testing on
       appear and have a non empty value attribute. Does not affect
       check status.
 	- =getVar(varname[, callback])= Inject javascript into the browser
-      under test to return the current value of the variable /varname/.
+      under test to return the current value of the variable
+      /varname/.
+	- =setValues(valHash[, callback])= Pass key/value pairs as hash to
+      set multiple elements values in one go. Keys are css selector
+      statements, value sthe values to set. /callback/ is passed a
+      hash with the result for each css selector.  Does not affect
+      check status.
 
 *** testingbot.com API
   
