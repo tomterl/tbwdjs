@@ -104,6 +104,11 @@ A small wrapper around camme/webdriverjs, that eases testing on
       element identified by /cssSelector/ is visible or not according
       to the parameter /visible/; errors are noted and will mark the
       check as failed on testingbot.com.
+	- =evaluate(code, expected[, callback])= Inject the given /code/
+      (javascript) into the browser. The /code/ has to =return= a
+      value; if this value matches /expected/, the check is
+      successfull - otherwise it failes; errors are noted and will
+      mark the check as failed on testingbot.com.
 	- =waitForVar(varname, expected, timeout, equality[, callback])=
       Wait at least /timeout/ seconds for the variable /varname/ to
       (not) equal to /expected/ (depending on the equality value
