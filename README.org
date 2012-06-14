@@ -97,6 +97,9 @@ A small wrapper around camme/webdriverjs, that eases testing on
 	- =titleEquals(title[, callback]})= checks if the current
       windowtitle equals /title/; errors are noted and will mark the
       check as failed on testingbot.com.
+	- =titleMatches(pattern[, callback]})= checks if the current
+      windowtitle matches the regular expression /pattern/; errors are
+      noted and will mark the check as failed on testingbot.com.
 	- =cssVisible(cssSelector, visible[, callback])= checks if the
       element identified by /cssSelector/ is visible or not according
       to the parameter /visible/; errors are noted and will mark the
