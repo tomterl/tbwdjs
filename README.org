@@ -109,6 +109,10 @@ A small wrapper around camme/webdriverjs, that eases testing on
       value; if this value matches /expected/, the check is
       successfull - otherwise it failes; errors are noted and will
       mark the check as failed on testingbot.com.
+	- =switchWindow()= Useful if you have /target="blank"/
+      links/forms/buttons. Successful if it can switch to another
+      window, unsuccessful otherwise; errors are noted and will mark
+      the check as failed on testingbot.com
 	- =waitForVar(varname, expected, timeout, equality[, callback])=
       Wait at least /timeout/ seconds for the variable /varname/ to
       (not) equal to /expected/ (depending on the equality value
@@ -128,6 +132,9 @@ A small wrapper around camme/webdriverjs, that eases testing on
       statements, value sthe values to set. /callback/ is passed a
       hash with the result for each css selector.  Does not affect
       check status.
+	- =showInfo(message)= Log an informational message formatted like
+      the output of the test-functions. Use it for example to log
+      command results: =client.showInfo(result.value);=.
 
 *** testingbot.com API
   
