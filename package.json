@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/tomterl/tbwdjs/issues"
   },
-  "engines": { "node": ">= 0.6.15" }
+  "engines": { "node": ">= 0.6.15" },
+  "scripts": {
+	"test": "nodeunit tests/*"
+  }
 }
