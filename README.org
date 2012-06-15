@@ -3,7 +3,8 @@
 A small wrapper around camme/webdriverjs, that eases testing on
 [[http://testingbot.com][testingbot.com]].
 
-[[http://travis-ci.org/#!/tomterl/tbwdjs][https://secure.travis-ci.org/tomterl/tbwdjs.png]]
+[[https://secure.travis-ci.org/tomterl/tbwdjs.png]]
+[[http://travis-ci.org/#!/tomterl/tbwdjs][(travis build status page)]]
 
 ** Installation
 
