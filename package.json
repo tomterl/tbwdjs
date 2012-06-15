@@ -10,7 +10,8 @@
   "version": "0.0.5",
   "dependencies": {
     "webdriverjs": "*",
-    "qs": "*"
+    "qs": "*",
+    "nodeunit": "*"
   },
   "directories": {
     "lib": "./lib"
