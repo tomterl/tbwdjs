@@ -110,7 +110,7 @@ A small wrapper around camme/webdriverjs, that eases testing on
 	- =evaluate(code, expected[, callback])= Inject the given /code/
       (javascript) into the browser. The /code/ has to =return= a
       value; if this value matches /expected/, the check is
-      successfull - otherwise it failes; errors are noted and will
+      successful - otherwise it failes; errors are noted and will
       mark the check as failed on testingbot.com.
 	- =switchWindow()= Useful if you have /target="blank"/
       links/forms/buttons. Successful if it can switch to another
@@ -132,7 +132,7 @@ A small wrapper around camme/webdriverjs, that eases testing on
       /varname/.
 	- =setValues(valHash[, callback])= Pass key/value pairs as hash to
       set multiple elements values in one go. Keys are css selector
-      statements, value sthe values to set. /callback/ is passed a
+      statements, values the values to set. /callback/ is passed a
       hash with the result for each css selector.  Does not affect
       check status.
 	- =showInfo(message)= Log an informational message formatted like
