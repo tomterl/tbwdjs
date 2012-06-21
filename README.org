@@ -165,3 +165,6 @@ A small wrapper around camme/webdriverjs, that eases testing on
    linter]], =gjslint= must be in your path.
 
    
+** License
+
+See LICENSE.
