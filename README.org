@@ -164,7 +164,6 @@ A small wrapper around camme/webdriverjs, that eases testing on
    not present. =make jslint= depends on Google's [[https://developers.google.com/closure/utilities/][closure
    linter]], =gjslint= must be in your path.
 
-   
 ** License
 
 See LICENSE.
