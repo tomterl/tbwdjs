@@ -7,7 +7,7 @@
     "email": "tom@goochesa.de"
   },
   "main": "./lib/tbwdjs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "dependencies": {
     "webdriverjs": "*",
     "qs": "*",
