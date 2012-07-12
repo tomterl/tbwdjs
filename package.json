@@ -9,7 +9,7 @@
   "main": "./lib/tbwdjs",
   "version": "0.0.8",
   "dependencies": {
-    "webdriverjs": "*",
+    "webdriverjs": "0.6.9",
     "qs": "*",
     "nodeunit": "*"
   },
