@@ -18,34 +18,34 @@ A small wrapper around camme/webdriverjs, that eases testing on
    #+BEGIN_SRC js
      var webdriverjs = require('tbwdjs');
      var client = webdriverjs.remote({
-         host: "hub.testingbot.com", 
+         host: 'hub.testingbot.com',
          desiredCapabilities: {
-             browserName: "internet explorer", 
-             version: 9, 
-             platform: "WINDOWS", 
-             api_key: "YOURKEY", 
-             api_secret: "YOUSECRET" 
+             browserName: 'internet explorer',
+             version: 9,
+             platform: 'WINDOWS',
+             api_key: 'YOURKEY',
+             api_secret: 'YOUSECRET'
          }
      });
      
      client
          .init()
-         .url("http://google.com/")
-         .titleEquals("Google")
+         .url('http://google.com/')
+         .titleEquals('Google')
          .end();
    #+END_SRC
 
    instead of the more flamboyant:
 
    #+BEGIN_SRC js
-     var webdriverjs = require("webdriverjs");
-     var assert = require("assert");
+     var webdriverjs = require('webdriverjs');
+     var assert = require('assert');
      var http = require('http');
      var qs = require('querystring');
-     var client = webdriverjs.remote({host: "hub.testingbot.com", 
-                                      desiredCapabilities:{browserName: "internet explorer", 
-                                                           version: 9, platform: "WINDOWS", 
-                                                           api_key: "YOURKEY", api_secret: "YOURSECRET" 
+     var client = webdriverjs.remote({host: 'hub.testingbot.com',
+                                      desiredCapabilities:{browserName: 'internet explorer',
+                                                           version: 9, platform: 'WINDOWS',
+                                                           api_key: 'YOURKEY', api_secret: 'YOURSECRET'
      }});
      
      var old = client.end;
@@ -53,11 +53,11 @@ A small wrapper around camme/webdriverjs, that eases testing on
      client.end = function(fn) {
          old(function() {
              if (fn) { fn(); }
-             var parts = __filename.split("/");
-             var name = parts[parts.length - 1].replace(".js", "");
+             var parts = __filename.split('/');
+             var name = parts[parts.length - 1].replace('.js', '');
              var postData = qs.stringify({
-                 client_key: client.desiredCapabilities["api_key"],
-                 client_secret: client.desiredCapabilities["api_secret"],
+                 client_key: client.desiredCapabilities['api_key'],
+                 client_secret: client.desiredCapabilities['api_secret'],
                  session_id: client.sessionId,
                  success:  client._errors.length === 0,
                  name: name,
@@ -88,8 +88,8 @@ A small wrapper around camme/webdriverjs, that eases testing on
      
      client
          .init()
-         .url("http://google.com/")
-         .getTitle(function(title) { try { assert.equal(title, "Google") } catch (e) { client._errors.push(e); } })
+         .url('http://google.com/')
+         .getTitle(function(title) { try { assert.equal(title, 'Google') } catch (e) { client._errors.push(e); } })
          .end();
              
    #+END_SRC
