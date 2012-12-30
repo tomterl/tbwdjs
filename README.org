@@ -3,7 +3,8 @@
 A small wrapper around camme/webdriverjs, that eases testing on
 [[http://testingbot.com][testingbot.com]].
 
-[![Selenium Test Status](http://testingbot.com/buildstatus/7cddb4217518696a1777f0d480dd8439)](http://testingbot.com/u/7cddb4217518696a1777f0d480dd8439)
+[[http://testingbot.com/buildstatus/7cddb4217518696a1777f0d480dd8439]]
+[[http://testingbot.com/u/7cddb4217518696a1777f0d480dd8439][(testingbot build status page)]]
 
 [[https://secure.travis-ci.org/tomterl/tbwdjs.png]]
 [[http://travis-ci.org/#!/tomterl/tbwdjs][(travis build status page)]]
