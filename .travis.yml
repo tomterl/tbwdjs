@@ -8,4 +8,3 @@ env:
   ]
 script:
 - "node tests/examples/*.js"
-- "nodeunit tests/integration/api_test.js"

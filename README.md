@@ -12,7 +12,8 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
    
    The boilerplate example given by the testingbot.com node.js wizard is
    reduced to
-     var webdriverjs = require('tbwdjs');
+
+	  var webdriverjs = require('tbwdjs');
      var client = webdriverjs.remote({
          host: 'hub.testingbot.com',
          desiredCapabilities: {
