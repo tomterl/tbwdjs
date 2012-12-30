@@ -1,20 +1,17 @@
-* tbwdjs -- TestingBotWebDriverJS
+# tbwdjs -- TestingBotWebDriverJS
 
 A small wrapper around camme/webdriverjs, that eases testing on
 [[http://testingbot.com][testingbot.com]].
 
-[[http://testingbot.com/buildstatus/7cddb4217518696a1777f0d480dd8439]]
-[[http://testingbot.com/u/7cddb4217518696a1777f0d480dd8439][(testingbot build status page)]]
+[![Selenium Test Status](http://testingbot.com/buildstatus/7cddb4217518696a1777f0d480dd8439)](http://testingbot.com/u/7cddb4217518696a1777f0d480dd8439)
+[![Travis Test Status](https://secure.travis-ci.org/testingbot/tbwdjs.png)](https://travis-ci.org/testingbot/tbwdjs)
 
-[[https://secure.travis-ci.org/tomterl/tbwdjs.png]]
-[[http://travis-ci.org/#!/tomterl/tbwdjs][(travis build status page)]]
-
-** Installation
+## Installation
 
    #+BEGIN_SRC sh 
      $ npm install tbwdjs
    #+END_SRC
-** Usage
+## Usage
    
    The boilerplate example given by the testingbot.com node.js wizard is
    reduced to
@@ -97,7 +94,7 @@ A small wrapper around camme/webdriverjs, that eases testing on
              
    #+END_SRC
 
-*** Additional commands
+## Additional commands
 	- =windowHandle()= Protocol command that returns the handle of the
       current browser window.
 	- =titleEquals(title[, callback]})= checks if the current
@@ -142,7 +139,7 @@ A small wrapper around camme/webdriverjs, that eases testing on
       the output of the test-functions. Use it for example to log
       command results: =client.showInfo(result.value);=.
 
-*** testingbot.com API
+## testingbot.com API
   
   Included are convenience methods to query the TestingBot API.
   Please have a look at this example to access the api only:
@@ -169,12 +166,12 @@ A small wrapper around camme/webdriverjs, that eases testing on
     });
     
   #+END_SRC
-*** Authenticate with =~/.testingbot=
+## Authenticate with =~/.testingbot=
 
 	You can omit the authentication data if you have your
 	=~/.testingbot= setup as described on [[http://testingbot.com]].
 
-** Contribute
+## Contribute
 
    Every contribution is welcome. Simply fork the repository, do your
    stuff and issue a pull request.
@@ -184,6 +181,6 @@ A small wrapper around camme/webdriverjs, that eases testing on
    not present. =make jslint= depends on Google's [[https://developers.google.com/closure/utilities/][closure
    linter]], =gjslint= must be in your path.
 
-** License
+## License
 
 See LICENSE.
