@@ -7,6 +7,6 @@ env:
     {secure: "JGdkAfr/SOlzV+NpgNi3fxP4F2uEnyswgCALGl7z++8eGAppugHj1IxhoyjY\nOp07x4p1hdIfWVF03RqUrPNXkl72+yh53pv2fUzx5DMsyZ8+pM2TGRjGy6J6\notuA/N+xs0+TP2ENlCmDauwOD/47Fjvj7Cgv940VRyaFzIGWPdw="}
   ]
 scripts: {
-	"test": "nodeunit tests/*.js",
-	"example": "node tests/examples/*.js"
+  "test": "nodeunit tests/*.js",
+  "example": "node tests/examples/*.js"
 }
