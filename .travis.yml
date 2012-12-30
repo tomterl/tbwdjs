@@ -1,7 +1,12 @@
 language: node_js
 node_js:
   - 0.6
-before_script: echo "travis:rocks" > ~/.testingbot
+env:
+- [
+    {secure: "akuE0dld1Ke9mahjUUrQhUZRYWaKo/1EJefX5WQ6iIyQ9T0DdeAcP2ZlbvOx\nqaPybirPGsDmImvcktaAkjLxpePd0V1+ak+4dws7dTrFfE9ypyGY/qwrQGs2\nud1q5oGOzEqfiRGxY/fJHLWlaQ609ByLyEDm3+2VeY1Z/V7N9iQ="},
+    {secure: "JGdkAfr/SOlzV+NpgNi3fxP4F2uEnyswgCALGl7z++8eGAppugHj1IxhoyjY\nOp07x4p1hdIfWVF03RqUrPNXkl72+yh53pv2fUzx5DMsyZ8+pM2TGRjGy6J6\notuA/N+xs0+TP2ENlCmDauwOD/47Fjvj7Cgv940VRyaFzIGWPdw="}
+  ]
 scripts: {
-	"test": "nodeunit tests/*"
+	"test": "nodeunit tests/*.js",
+	"example": "node tests/examples/*.js"
 }
