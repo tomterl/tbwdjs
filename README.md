@@ -1,7 +1,6 @@
 # tbwdjs -- TestingBotWebDriverJS
 
-A small wrapper around camme/webdriverjs, that eases testing on
-[[http://testingbot.com][testingbot.com]].
+A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](http://testingbot.com))
 
 [![Selenium Test Status](http://testingbot.com/buildstatus/7cddb4217518696a1777f0d480dd8439)](http://testingbot.com/u/7cddb4217518696a1777f0d480dd8439)
 [![Travis Test Status](https://secure.travis-ci.org/testingbot/tbwdjs.png)](https://travis-ci.org/testingbot/tbwdjs)
@@ -157,20 +156,19 @@ A small wrapper around camme/webdriverjs, that eases testing on
         console.log(browsers);
     });
     
-## Authenticate with =~/.testingbot=
+## Authenticate with ~/.testingbot
 
 	You can omit the authentication data if you have your
-	=~/.testingbot= setup as described on [[http://testingbot.com]].
+	~/.testingbot setup as described on ([TestingBot](http://testingbot.com)).
 
 ## Contribute
 
    Every contribution is welcome. Simply fork the repository, do your
    stuff and issue a pull request.
    
-   Contributions should be =make jshint= and =make jslint=
-   clean. =make jshint= will install the npm module locally if it is
-   not present. =make jslint= depends on Google's [[https://developers.google.com/closure/utilities/][closure
-   linter]], =gjslint= must be in your path.
+   Contributions should be make jshint and make jslint
+   clean. make jshint will install the npm module locally if it is
+   not present. make jslint depends on Google's ([closure linter](https://developers.google.com/closure/utilities/)), gjslint must be in your path.
 
 ## License
 
