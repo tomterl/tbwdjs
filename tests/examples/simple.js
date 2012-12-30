@@ -8,7 +8,7 @@ var client = webdriverjs.remote({
         api_key: process.env.TESTINGBOT_KEY,
         api_secret: process.env.TESTINGBOT_SECRET,
         name: (process.env.TRAVIS_JOB_ID ? ("Travis Build " + process.env.TRAVIS_JOB_ID) : "Simple Test"),
-        privacy: 1
+        privacy: "true"
     }
 });
 

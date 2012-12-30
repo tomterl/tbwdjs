@@ -8,14 +8,11 @@ A small wrapper around camme/webdriverjs, that eases testing on
 
 ## Installation
 
-   #+BEGIN_SRC sh 
      $ npm install tbwdjs
-   #+END_SRC
 ## Usage
    
    The boilerplate example given by the testingbot.com node.js wizard is
    reduced to
-   #+BEGIN_SRC js
      var webdriverjs = require('tbwdjs');
      var client = webdriverjs.remote({
          host: 'hub.testingbot.com',
@@ -33,11 +30,9 @@ A small wrapper around camme/webdriverjs, that eases testing on
          .url('http://google.com/')
          .titleEquals('Google')
          .end();
-   #+END_SRC
 
    instead of the more flamboyant:
 
-   #+BEGIN_SRC js
      var webdriverjs = require('webdriverjs');
      var assert = require('assert');
      var http = require('http');
@@ -91,8 +86,6 @@ A small wrapper around camme/webdriverjs, that eases testing on
          .url('http://google.com/')
          .getTitle(function(title) { try { assert.equal(title, 'Google') } catch (e) { client._errors.push(e); } })
          .end();
-             
-   #+END_SRC
 
 ## Additional commands
 	- =windowHandle()= Protocol command that returns the handle of the
@@ -143,14 +136,13 @@ A small wrapper around camme/webdriverjs, that eases testing on
   
   Included are convenience methods to query the TestingBot API.
   Please have a look at this example to access the api only:
-  #+BEGIN_SRC js
+ 
     var tbwdjs  = require('tbwdjs');
     var t = tbwdjs.api({ api_key: 'key', api_secret: 'secret'});
     t.getBrowsers(function(browsers) { console.log(browsers); });
-   #+END_SRC
 
   You can always access the api during tests with your client-object:
-  #+BEGIN_SRC js
+
     var webdriverjs = require('tbwdjs');
     var client = webdriverjs.remote({
         host: 'hub.testingbot.com',
@@ -165,7 +157,6 @@ A small wrapper around camme/webdriverjs, that eases testing on
         console.log(browsers);
     });
     
-  #+END_SRC
 ## Authenticate with =~/.testingbot=
 
 	You can omit the authentication data if you have your
