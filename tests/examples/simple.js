@@ -13,7 +13,6 @@ var client = webdriverjs.remote({
 });
 
 client
-    .testMode()
     .init()
     .url('http://google.com/')
     .titleEquals('Google')
