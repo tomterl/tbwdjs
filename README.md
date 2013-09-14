@@ -2,7 +2,6 @@
 
 A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](http://testingbot.com))
 
-[![Selenium Test Status](http://testingbot.com/buildstatus/7cddb4217518696a1777f0d480dd8439)](http://testingbot.com/u/7cddb4217518696a1777f0d480dd8439)
 [![Travis Test Status](https://secure.travis-ci.org/testingbot/tbwdjs.png)](https://travis-ci.org/testingbot/tbwdjs)
 
 ## Installation
@@ -29,62 +28,6 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
          .init()
          .url('http://google.com/')
          .titleEquals('Google')
-         .end();
-
-   instead of the more flamboyant:
-
-     var webdriverjs = require('webdriverjs');
-     var assert = require('assert');
-     var http = require('http');
-     var qs = require('querystring');
-     var client = webdriverjs.remote({host: 'hub.testingbot.com',
-                                      desiredCapabilities:{browserName: 'internet explorer',
-                                                           version: 9, platform: 'WINDOWS',
-                                                           api_key: 'YOURKEY', api_secret: 'YOURSECRET'
-     }});
-     
-     var old = client.end;
-     client._errors = [];
-     client.end = function(fn) {
-         old(function() {
-             if (fn) { fn(); }
-             var parts = __filename.split('/');
-             var name = parts[parts.length - 1].replace('.js', '');
-             var postData = qs.stringify({
-                 client_key: client.desiredCapabilities['api_key'],
-                 client_secret: client.desiredCapabilities['api_secret'],
-                 session_id: client.sessionId,
-                 success:  client._errors.length === 0,
-                 name: name,
-                 kind: 10
-             });
-             
-             var post_options = {
-                   host: 'testingbot.com',
-                   port: '80',
-                   path: '/hq',
-                   method: 'POST',
-                   headers: {
-                       'Content-Type': 'application/x-www-form-urlencoded',
-                       'Content-Length': postData.length
-                   }
-               };
-     
-               // Set up the request
-               var post_req = http.request(post_options, function(res) {
-                   res.setEncoding('utf8');
-               });
-     
-               // post the data
-               post_req.write(postData);
-               post_req.end();
-         });
-     };
-     
-     client
-         .init()
-         .url('http://google.com/')
-         .getTitle(function(title) { try { assert.equal(title, 'Google') } catch (e) { client._errors.push(e); } })
          .end();
 
 ## Additional commands
