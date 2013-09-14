@@ -6,7 +6,7 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
 
 ## Installation
 
-     $ npm install tbwdjs
+     $ npm install testingbot
 ## Usage
    
    The boilerplate example given by the testingbot.com node.js wizard is
