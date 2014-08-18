@@ -1,6 +1,6 @@
 {
   "name": "testingbot",
-  "description": "a wrapper for camme/webdriverjs to ease testingbot.com testing",
+  "description": "a wrapper for WebdriverIO to ease testingbot.com testing",
   "private": false,
   "author": {
     "name": "Testingbot",
@@ -9,7 +9,7 @@
   "main": "./lib/tbwdjs",
   "version": "0.1.1",
   "dependencies": {
-    "webdriverjs": ">= 0.6.9",
+    "webdriverio": ">=2.1.0",
     "qs": "*",
     "nodeunit": "*"
   },
