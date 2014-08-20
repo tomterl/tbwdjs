@@ -1,6 +1,6 @@
 # tbwdjs -- TestingBotWebDriverJS
 
-A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](http://testingbot.com))
+A small wrapper around [WebdriverIO](http://webdriver.io), that eases testing on ([TestingBot](http://testingbot.com))
 
 [![Travis Test Status](https://secure.travis-ci.org/testingbot/tbwdjs.png)](https://travis-ci.org/testingbot/tbwdjs)
 
@@ -8,7 +8,7 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
 
      $ npm install testingbot
 ## Usage
-   
+
    The boilerplate example given by the testingbot.com node.js wizard is
    reduced to
 
@@ -23,7 +23,7 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
              api_secret: 'YOUSECRET'
          }
      });
-     
+
      client
          .init()
          .url('http://google.com/')
@@ -76,10 +76,10 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
       command results: =client.showInfo(result.value);=.
 
 ## testingbot.com API
-  
+
   Included are convenience methods to query the TestingBot API.
   Please have a look at this example to access the api only:
- 
+
     var tbwdjs  = require('tbwdjs');
     var t = tbwdjs.api({ api_key: 'key', api_secret: 'secret'});
     t.getBrowsers(function(browsers) { console.log(browsers); });
@@ -95,11 +95,11 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
             platform: 'WINDOWS'
         }
     });
-    
+
     client.api.getBrowsers(function(browsers) {
         console.log(browsers);
     });
-    
+
 ## Authenticate with ~/.testingbot
 
 	You can omit the authentication data if you have your
@@ -109,7 +109,7 @@ A small wrapper around camme/webdriverjs, that eases testing on ([TestingBot](ht
 
    Every contribution is welcome. Simply fork the repository, do your
    stuff and issue a pull request.
-   
+
    Contributions should be make jshint and make jslint
    clean. make jshint will install the npm module locally if it is
    not present. make jslint depends on Google's ([closure linter](https://developers.google.com/closure/utilities/)), gjslint must be in your path.
