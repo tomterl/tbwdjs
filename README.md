@@ -1,3 +1,8 @@
+# maintanance notice
+
+This module is unmaintained -- you should follow the nodejs/javascript instructions on 
+the testingbot.com website.
+
 # tbwdjs -- TestingBotWebDriverJS
 
 A small wrapper around [WebdriverIO](http://webdriver.io), that eases testing on ([TestingBot](http://testingbot.com))
